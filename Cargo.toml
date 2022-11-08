@@ -1,0 +1,23 @@
+[package]
+name = "nordpool"
+version = "0.1.0"
+edition = "2021"
+authors = ["Peter Allwin <peter@allwin.se>"]
+repository = "https://github.com/peterall/nordpool.git"
+homepage = "https://github.com/peterall/nordpool.git"
+license = "MIT"
+readme = "README.md"
+description = "A Rust library for fetching Nord Pool spot prices"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = {version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1.21", features = ["macros"] }
+chrono = "0.4"
+chrono-tz = "0.8"
+iso-8601 = "0.4"
+rusty-money = { version = "0.4.0", features = ["iso"] }
+rust_decimal = "1.26"
+rust_decimal_macros = "1.26"
